@@ -75,4 +75,3 @@ resource "aws_api_gateway_deployment" "example" {
   stage_name = "dev"  # Specify the desired stage name
 }
 
-
