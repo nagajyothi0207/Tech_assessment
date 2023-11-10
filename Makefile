@@ -38,4 +38,4 @@ down:
 	@docker rmi ${TF_TAG}
 
 conn:
-	@docker exec -it ${TF_NAME} /bin/sh
+	@docker exec --interactive --user root -it ${TF_NAME} /bin/sh

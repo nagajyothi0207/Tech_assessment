@@ -1,4 +1,4 @@
-ENDPOINT_URL=http://localstack:4567
+ENDPOINT_URL=http://localstack:4566
 NAME=helloworld-localstack
 
 init:
@@ -30,7 +30,7 @@ list2:
 test2:
 	@{\
 		REST_API_ID="$$(aws --endpoint-url=${ENDPOINT_URL} apigateway get-rest-apis | jq -r '.items[0].id')"; \
-		curl -s http://${LOCALSTACK_HOSTNAME}:4567/restapis/$${REST_API_ID}/test/_user_request_/ | jq '.'; \
+		curl -s http://${LOCALSTACK_HOSTNAME}:4566/restapis/$${REST_API_ID}/test/_user_request_/ | jq '.'; \
 	}
 
 test3:
